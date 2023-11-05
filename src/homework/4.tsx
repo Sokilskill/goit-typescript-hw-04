@@ -1,4 +1,4 @@
-import { createContext, useMemo, useState, useContext } from "react";
+import { createContext, useMemo, useState, useContext, ReactNode } from "react";
 import noop from "lodash/noop";
 
 type MenuIds = "first" | "second" | "last";
@@ -20,7 +20,7 @@ const MenuActionContext = createContext<MenuAction>({
 });
 
 type PropsProvider = {
-  children: React.ReactNode; // Додати тип для children
+  children: ReactNode; // Додати тип для children
 };
 
 function MenuProvider({ children }: PropsProvider) {
